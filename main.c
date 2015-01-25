@@ -8,7 +8,7 @@
  * utilizzo: nome, numero e tipo dei parametri di ingresso, tipo del (unico)
  * parametro di uscita.
  * 
- * La definizione della funzione Ã¨ ottenuta mediante la definizione del suo
+ * La definizione della funzione è ottenuta mediante la definizione del suo
  * corpo. La parte definitoria si trova dopo la funzione main. 
  */
 float somma(float a, float b);
@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     scanf("%f", &b);
     
     getchar();
-    /* La presenza di questa chiamata alla funzione getchar() Ã¨ dovuto al funzionamento
+    /* La presenza di questa chiamata alla funzione getchar() è dovuto al funzionamento
      * "buffered line" definito dallo standard POSIX.
      */
     
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
     puts("3 -  Moltiplicazione a*b");
     puts("4 -  Divisione a/b con risultato frazionale");
     puts("5 -  Disione a/b con parte intera e parte frazionale");
-    puts("6 -  Elevamento a potenza a^b (l'esponente Ã¨ troncato ad intero)");
+    puts("6 -  Elevamento a potenza a^b (l'esponente è troncato ad intero)");
     scelta = getchar();
     scelta = scelta - '0';
     
@@ -79,36 +79,50 @@ int main(int argc, char** argv) {
 }
 
 float somma(float a, float b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    float risultato;
+    risultato = a+b;
+    return risultato;
 }
 
 float sottrazione(float a, float b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    float risultato;
+    risultato = a-b;
+    return risultato;
 }
 
 float prodotto(float a, float b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    float risultato;
+    risultato = a*b;
+    return risultato;
 }
 
 float divisione(float a, float b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    float risultato;
+    risultato = a/b;
+    return risultato;
 }
 
 int quoziente(int a, int b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    int risultato;
+    risultato = a/b;
+    return risultato;
 }
 
 float frazionale(int a, int b) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    int q;
+    float d, risultato;
+    q = quoziente(a,b);
+    d = divisione((float)a, (float)b);
+    risultato = d - q;
+    return risultato;
 }
 
 float potenza(float base, int esponente) {
-    // TODO Definire il corpo della funzione
-    return 0;
+    float risultato;
+    risultato = 1;
+    while(esponente > 0) {
+        risultato *= base;
+        esponente--;
+    }
+    return risultato;
 }
